@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Contact>
+
+<table id="contacts" class="table mt-5" data-url="@Url.Action("Index")">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var contact in Model)
+        {
+        <tr>
+            <td>@contact.FirstName @contact.LastName</td>
+            <td>@contact.Email</td>
+        </tr>
+        }
+    </tbody>
+</table>
